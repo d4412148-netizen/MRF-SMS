@@ -907,6 +907,7 @@ const whatsappCountries = [
     { name: 'Thailand', code: '+66', price: 300, countryId: 52, flag: '🇹🇭' },
     { name: 'Vietnam', code: '+84', price: 210, countryId: 10, flag: '🇻🇳' },
     { name: 'Colombia', code: '+57', price: 240, countryId: 33, flag: '🇨🇴' },
+    { name: 'India', code: '+91', price: 360, countryId: 22, flag: '🇮🇳' },
     { name: 'Saudi Arabia', code: '+966', price: 240, countryId: 53, flag: '🇸🇦' },
     { name: 'Brazil', code: '+55', price: 370, countryId: 73, flag: '🇧🇷' },
     { name: 'USA', code: '+1', price: 370, countryId: 187, flag: '🇺🇸' },
