@@ -3507,7 +3507,8 @@ const taptapsendCountries = [
     { name: 'Czech Republic', code: '+420', price: 30.58, countryId: 63, flag: '🇨🇿' },
     { name: 'Latvia', code: '+371', price: 85.54, countryId: 49, flag: '🇱🇻' },
     { name: 'Croatia', code: '+385', price: 48.78, countryId: 45, flag: '🇭🇷' },
-    { name: 'Denmark', code: '+45', price: 121.94, countryId: 172, flag: '🇩🇰' }
+    { name: 'Denmark', code: '+45', price: 121.94, countryId: 172, flag: '🇩🇰' },
+    { name: 'Germany', code: '+49', price: 45, countryId: 43, flag: '🇩🇪' }
 ];
 
 const foodoraCountries = [
