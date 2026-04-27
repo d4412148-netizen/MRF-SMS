@@ -945,6 +945,24 @@ function showPaymentFormError(message) {
     errorBox.classList.add('show');
 }
 
+function clearAuthFormError() {
+    const errorBox = qs('auth-form-error');
+    if (!errorBox) return;
+    errorBox.textContent = '';
+    errorBox.classList.add('hidden');
+}
+
+function showAuthFormError(message) {
+    const errorBox = qs('auth-form-error');
+    if (!errorBox) {
+        showToast(message, 'error');
+        return;
+    }
+    errorBox.textContent = message;
+    errorBox.classList.remove('hidden');
+    errorBox.scrollIntoView({ block: 'start', behavior: 'smooth' });
+}
+
 function showPaymentTopAlert() {
     qs('payment-top-alert')?.classList.remove('hidden');
     updateProcessingModalState();
@@ -1034,6 +1052,7 @@ function openAuthModal(mode = 'login') {
     setAuthMode(mode === 'register' ? 'register' : 'login');
     hideAccountDetails();
     hideHeaderQuickMenu();
+    clearAuthFormError();
     openModal('login-prompt');
 }
 
@@ -2852,6 +2871,7 @@ function setAuthMode(mode) {
     const loginPanel = qs('login-form-wrap');
     const registerPanel = qs('register-form-wrap');
     const isLogin = mode === 'login';
+    clearAuthFormError();
     loginTab.classList.toggle('active', isLogin);
     registerTab.classList.toggle('active', !isLogin);
     loginPanel.classList.toggle('hidden', !isLogin);
@@ -2861,6 +2881,7 @@ function setAuthMode(mode) {
 async function login(email, password) {
     const button = qs('login-btn');
     setLoading(button, 'Signing in...');
+    clearAuthFormError();
     try {
         const response = await fetch('/api/login', {
             method: 'POST',
@@ -2869,11 +2890,12 @@ async function login(email, password) {
             credentials: 'include'
         });
         if (!response.ok) throw new Error(await response.text());
+        clearAuthFormError();
         showToast('Logged in successfully', 'success');
         await checkAuth();
         closeModal('login-prompt');
     } catch (err) {
-        showToast(err.message || 'Login failed', 'error');
+        showAuthFormError(err.message || 'Login failed');
     } finally {
         resetLoading(button);
     }
@@ -2882,6 +2904,7 @@ async function login(email, password) {
 async function register(name, email, password) {
     const button = qs('register-btn');
     setLoading(button, 'Creating account...');
+    clearAuthFormError();
     try {
         const response = await fetch('/api/register', {
             method: 'POST',
@@ -2890,11 +2913,12 @@ async function register(name, email, password) {
             credentials: 'include'
         });
         if (!response.ok) throw new Error(await response.text());
+        clearAuthFormError();
         showToast('Account created successfully. Please login.', 'success');
         qs('register-form').reset();
         setAuthMode('login');
     } catch (err) {
-        showToast(err.message || 'Registration failed', 'error');
+        showAuthFormError(err.message || 'Registration failed');
     } finally {
         resetLoading(button);
     }
