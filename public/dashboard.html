@@ -228,6 +228,7 @@
         .auth-form-card{display:grid;gap:18px;border-radius:30px;background:linear-gradient(145deg,#edf7f0 0%,#e2f0e7 100%);padding:16px;box-shadow:inset 12px 12px 28px rgba(191,204,196,.32),inset -12px -12px 26px rgba(255,255,255,.84)}
         .auth-form-wrap{margin-top:0!important}
         .auth-form-stack{display:grid;gap:14px}
+        .credential-decoy{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important;opacity:0!important;pointer-events:none!important}
         .auth-input-shell{display:flex;align-items:center;min-height:58px;border-radius:22px;background:linear-gradient(145deg,#f5fbf6 0%,#dcece1 100%);padding:0 18px;box-shadow:inset 7px 7px 16px rgba(181,194,185,.26),inset -7px -7px 16px rgba(255,255,255,.95),0 10px 20px rgba(148,163,184,.1)}
         .auth-input{width:100%;border:none;background:transparent;font-size:15px;font-weight:600;color:#0f172a;outline:none}
         .auth-input::placeholder{color:#7c8a82;font-weight:600}
@@ -692,7 +693,7 @@
                             <div class="payment-info-row"><span>Account Holder Name</span><strong>Nihayat Begum</strong></div>
                         </div>
                         <div class="input-wrap">
-                            <input type="number" name="amount" id="payment-amount-input" placeholder="Amount (Minimum 50 PKR)" min="100" required>
+                            <input type="number" name="amount" id="payment-amount-input" placeholder="Amount (Minimum 100 PKR)" min="100" required>
                         </div>
                         <label class="payment-upload-box">
                             <div class="payment-upload-top">
