@@ -1036,6 +1036,7 @@ const whatsappCountries = [
     { name: 'France', code: '+33', price: 194.38, countryId: 78, flag: '🇫🇷' },
     { name: 'Greece', code: '+30', price: 161.98, countryId: 129, flag: '🇬🇷' },
     { name: 'Turkey', code: '+90', price: 1073.07, countryId: 62, flag: '🇹🇷' },
+    { name: 'China', code: '+86', price: 212.58, countryId: 3, flag: '🇨🇳' },
     { name: 'Poland', code: '+48', price: 230.78, countryId: 15, flag: '🇵🇱' },
     { name: 'Romania', code: '+40', price: 230.05, countryId: 32, flag: '🇷🇴' },
     { name: 'Netherlands', code: '+31', price: 291.2, countryId: 48, flag: '🇳🇱' },
