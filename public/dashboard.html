@@ -212,14 +212,33 @@
         #activation-filter-bar{display:none!important}
         #header-payment-detail-action{display:none!important}
         #activation-summary-line{display:none!important}
-        .auth-switch-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;border-radius:22px;border:1px solid #bbf7d0;background:#ecfdf5;padding:10px;box-shadow:inset 0 0 0 1px rgba(34,197,94,.08)}
-        .auth-switch-button{border:1px solid rgba(34,197,94,.22);border-radius:18px;padding:14px 16px;font-size:14px;font-weight:800;color:#166534;background:#dcfce7;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,background-color .2s ease,color .2s ease,border-color .2s ease}
-        .auth-switch-button:hover{background:#bbf7d0;border-color:rgba(22,163,74,.35)}
-        .auth-switch-button.active{transform:translateY(-1px);color:#ffffff;background:#16a34a;box-shadow:0 12px 24px rgba(22,163,74,.22);border-color:#16a34a}
-        .auth-switch-button.auth-login-toggle.active,.auth-switch-button.auth-register-toggle.active{background:#16a34a}
-        #login-prompt{overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
-        .auth-modal-shell{width:min(760px,100%);max-height:calc(100vh - 48px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
-        .auth-modal-topbar{display:flex;align-items:center;justify-content:flex-end;margin-bottom:8px}
+        .auth-switch-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;border-radius:999px;background:linear-gradient(145deg,#eef8f1 0%,#dcebdf 100%);padding:8px;box-shadow:inset 9px 9px 20px rgba(176,191,182,.22),inset -9px -9px 18px rgba(255,255,255,.92)}
+        .auth-switch-button{border:none;border-radius:999px;padding:14px 16px;font-size:14px;font-weight:800;color:#2f6b45;background:transparent;cursor:pointer;transition:transform .24s ease,box-shadow .24s ease,background .24s ease,color .24s ease}
+        .auth-switch-button:hover{transform:translateY(-1px);color:#166534}
+        .auth-switch-button.active{color:#ffffff;background:linear-gradient(135deg,#166534 0%,#15803d 100%);box-shadow:10px 10px 20px rgba(22,101,52,.18),-8px -8px 18px rgba(255,255,255,.7)}
+        .auth-switch-button.auth-login-toggle.active,.auth-switch-button.auth-register-toggle.active{background:linear-gradient(135deg,#166534 0%,#15803d 100%)}
+        #login-prompt{align-items:center!important;justify-content:center!important;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;background:radial-gradient(circle at top,rgba(220,252,231,.36),transparent 32%),rgba(15,23,42,.62)!important;padding:24px!important;backdrop-filter:blur(14px)!important}
+        .auth-modal-shell{width:min(460px,100%)!important;max-height:calc(100vh - 48px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;border-radius:34px!important;background:linear-gradient(145deg,#f2faf4 0%,#ddeee2 100%)!important;border:1px solid rgba(255,255,255,.72)!important;padding:20px!important;box-shadow:24px 24px 48px rgba(148,163,184,.28),-20px -20px 40px rgba(255,255,255,.92),inset 1px 1px 0 rgba(255,255,255,.85)}
+        .auth-modal-topbar{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:18px}
+        .auth-brand-block{display:grid;gap:6px;min-width:0}
+        .auth-brand-title{margin:0;font-size:24px;font-weight:900;line-height:1.1;letter-spacing:.18em;text-transform:uppercase;color:#14532d}
+        .auth-brand-subtitle{margin:0;font-size:13px;font-weight:700;line-height:1.45;color:#64748b}
+        #login-prompt .close-x{display:inline-flex;height:46px;width:46px;align-items:center;justify-content:center;flex:0 0 auto;border:none;border-radius:18px;background:linear-gradient(145deg,#f2faf4 0%,#dceee2 100%);font-size:18px;color:#166534;box-shadow:10px 10px 24px rgba(148,163,184,.18),-10px -10px 22px rgba(255,255,255,.94),inset 1px 1px 0 rgba(255,255,255,.82)}
+        #login-prompt .close-x:hover{color:#14532d}
+        .auth-form-card{display:grid;gap:18px;border-radius:30px;background:linear-gradient(145deg,#edf7f0 0%,#e2f0e7 100%);padding:16px;box-shadow:inset 12px 12px 28px rgba(191,204,196,.32),inset -12px -12px 26px rgba(255,255,255,.84)}
+        .auth-form-wrap{margin-top:0!important}
+        .auth-form-stack{display:grid;gap:14px}
+        .auth-input-shell{display:flex;align-items:center;min-height:58px;border-radius:22px;background:linear-gradient(145deg,#f5fbf6 0%,#dcece1 100%);padding:0 18px;box-shadow:inset 7px 7px 16px rgba(181,194,185,.26),inset -7px -7px 16px rgba(255,255,255,.95),0 10px 20px rgba(148,163,184,.1)}
+        .auth-input{width:100%;border:none;background:transparent;font-size:15px;font-weight:600;color:#0f172a;outline:none}
+        .auth-input::placeholder{color:#7c8a82;font-weight:600}
+        .auth-primary-action{display:inline-flex;width:100%;min-height:56px;align-items:center;justify-content:center;border:none;border-radius:22px;background:linear-gradient(135deg,#16a34a 0%,#166534 100%);padding:0 18px;font-size:15px;font-weight:800;color:#ffffff;box-shadow:14px 14px 26px rgba(22,101,52,.22),-8px -8px 18px rgba(255,255,255,.62);transition:transform .24s ease,box-shadow .24s ease,filter .24s ease}
+        .auth-primary-action:hover{transform:translateY(-1px);filter:saturate(1.05)}
+        .auth-google-action{display:inline-flex;width:100%;min-height:56px;align-items:center;justify-content:center;gap:12px;border:none;border-radius:22px;background:linear-gradient(145deg,#ffffff 0%,#edf4ef 100%);padding:0 18px;font-size:15px;font-weight:800;color:#0f172a;box-shadow:12px 12px 24px rgba(148,163,184,.16),-10px -10px 24px rgba(255,255,255,.96)}
+        .auth-google-logo{display:inline-flex;height:22px;width:22px;flex:0 0 auto}
+        .auth-google-logo svg{display:block;height:100%;width:100%}
+        .auth-forgot-row{display:flex;align-items:center;justify-content:center;padding-top:2px}
+        .auth-forgot-link{text-decoration:none;font-size:13px;font-weight:800;color:#166534}
+        @media (max-width:640px){body #login-prompt{padding:14px!important;align-items:center!important}body .auth-modal-shell{width:min(100%,calc(100vw - 12px))!important;max-height:calc(100vh - 28px)!important;border-radius:28px!important;padding:16px!important}body .auth-modal-topbar{margin-bottom:14px!important;gap:12px!important}body .auth-brand-title{font-size:20px!important;letter-spacing:.16em!important}body .auth-brand-subtitle{font-size:12px!important}body #login-prompt .close-x{height:42px!important;width:42px!important;border-radius:16px!important;font-size:18px!important}body .auth-form-card{gap:14px!important;border-radius:24px!important;padding:12px!important}body .auth-switch-grid{gap:8px!important;padding:7px!important}body .auth-switch-button{padding:11px 10px!important;font-size:13px!important}body .auth-form-stack{gap:12px!important}body .auth-input-shell{min-height:52px!important;border-radius:18px!important;padding:0 16px!important}body .auth-input{font-size:14px!important}body .auth-primary-action,body .auth-google-action{min-height:52px!important;border-radius:18px!important;font-size:14px!important}body .auth-google-logo{height:20px!important;width:20px!important}body .auth-forgot-link{font-size:12px!important}}
         .guest-access-card{display:flex;align-items:center;justify-content:space-between;gap:16px}
 
         .wide-btn{width:100%;margin-top:12px;padding:14px 16px;border-radius:18px}
@@ -388,30 +407,35 @@
         <div id="login-prompt" class="app-modal hidden fixed inset-0 z-[130] flex items-start justify-center bg-slate-950/75 px-4 py-6">
             <div class="modal-content auth-modal-shell">
                 <div class="auth-modal-topbar">
+                    <div class="auth-brand-block">
+                        <h3 class="auth-brand-title">MRF SMS PANEL</h3>
+                        <p class="auth-brand-subtitle">Secure Login &amp; Create Account</p>
+                    </div>
                     <button type="button" class="close-x" data-close-modal="login-prompt">✕</button>
                 </div>
-                <div>
+                <div class="auth-form-card">
                     <div class="auth-switch-grid">
                         <button id="show-login-tab" class="auth-switch-button auth-login-toggle active">Login</button>
                         <button id="show-register-tab" class="auth-switch-button auth-register-toggle">Create Account</button>
                     </div>
-                    <div id="login-form-wrap" class="mt-5">
-                        <div id="login-form" class="space-y-4" role="form" aria-label="Login to dashboard">
+                    <div id="login-form-wrap" class="auth-form-wrap mt-5">
+                        <div id="login-form" class="auth-form-stack" role="form" aria-label="Login to dashboard">
                             <input class="credential-decoy" type="text" tabindex="-1" aria-hidden="true" autocomplete="username">
                             <input class="credential-decoy" type="password" tabindex="-1" aria-hidden="true" autocomplete="current-password">
-                            <div class="rounded-2xl border border-slate-800/80 bg-slate-950/70 px-4 py-3"><input id="login-email" name="contact-handle" type="text" inputmode="email" placeholder="Email address" class="w-full bg-transparent text-sm text-white outline-none placeholder:text-slate-500" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" required></div>
-                            <div class="rounded-2xl border border-slate-800/80 bg-slate-950/70 px-4 py-3"><input id="login-password" name="dashboard-access-code" type="text" inputmode="text" placeholder="Password" class="masked-password-field w-full bg-transparent text-sm text-white outline-none placeholder:text-slate-500" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" data-lpignore="true" data-1p-ignore="true" required></div>
-                            <button id="login-btn" type="button" class="w-full rounded-2xl bg-emerald-600 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/20 transition hover:bg-emerald-500">Login to Dashboard</button>
-                            <button id="google-login-btn" type="button" class="w-full rounded-2xl border border-slate-700 bg-white px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"><span class="inline-flex items-center gap-2"><i class="fa-brands fa-google service-gradient-google"></i><span>Sign in with Google</span></span></button>
-                            <div class="flex items-center justify-end"><a href="/forgot-password.html" class="text-sm font-medium text-emerald-700 transition hover:text-emerald-600">Forgot Password?</a></div>
+                            <div class="auth-input-shell"><input id="login-email" name="contact-handle" type="text" inputmode="email" placeholder="Email" class="auth-input" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" required></div>
+                            <div class="auth-input-shell"><input id="login-password" name="dashboard-access-code" type="text" inputmode="text" placeholder="Password" class="auth-input masked-password-field" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" data-lpignore="true" data-1p-ignore="true" required></div>
+                            <button id="login-btn" type="button" class="auth-primary-action">Login to Dashboard</button>
+                            <button id="google-login-btn" type="button" class="auth-google-action"><span class="auth-google-logo" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c2.993 0 5.729 1.128 7.818 2.982l5.657-5.657C34.046 6.053 29.27 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c2.993 0 5.729 1.128 7.818 2.982l5.657-5.657C34.046 6.053 29.27 4 24 4c-7.682 0-14.344 4.337-17.694 10.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.173 35.091 26.715 36 24 36c-5.203 0-9.622-3.317-11.286-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-.792 2.237-2.231 4.166-4.084 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg></span><span>Sign in with Google</span></button>
+                            <div class="auth-forgot-row"><a href="/forgot-password.html" class="auth-forgot-link">Forgot Password?</a></div>
                         </div>
                     </div>
-                    <div id="register-form-wrap" class="mt-5 hidden">
-                        <form id="register-form" class="space-y-4">
-                            <div class="rounded-2xl border border-slate-800/80 bg-slate-950/70 px-4 py-3"><input id="reg-name" type="text" placeholder="Full name" class="w-full bg-transparent text-sm text-white outline-none placeholder:text-slate-500" required></div>
-                            <div class="rounded-2xl border border-slate-800/80 bg-slate-950/70 px-4 py-3"><input id="reg-email" type="email" placeholder="Email address" class="w-full bg-transparent text-sm text-white outline-none placeholder:text-slate-500" required></div>
-                            <div class="rounded-2xl border border-slate-800/80 bg-slate-950/70 px-4 py-3"><input id="reg-password" type="password" placeholder="Password" class="w-full bg-transparent text-sm text-white outline-none placeholder:text-slate-500" required></div>
-                            <button id="register-btn" type="submit" class="w-full rounded-2xl bg-slate-900 px-4 py-3 text-sm font-semibold text-black shadow-lg shadow-slate-900/15 transition hover:bg-slate-800">Create Account</button>
+                    <div id="register-form-wrap" class="auth-form-wrap mt-5 hidden">
+                        <form id="register-form" class="auth-form-stack">
+                            <div class="auth-input-shell"><input id="reg-name" type="text" placeholder="Full Name" class="auth-input" required></div>
+                            <div class="auth-input-shell"><input id="reg-email" type="email" placeholder="Email" class="auth-input" required></div>
+                            <div class="auth-input-shell"><input id="reg-password" type="password" placeholder="Password" class="auth-input" required></div>
+                            <div class="auth-input-shell"><input id="reg-confirm-password-ui" type="password" placeholder="Confirm Password" class="auth-input" autocomplete="new-password"></div>
+                            <button id="register-btn" type="submit" class="auth-primary-action">Create Account</button>
                         </form>
                     </div>
                 </div>
