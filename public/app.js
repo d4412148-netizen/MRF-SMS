@@ -26,6 +26,7 @@ const state = {
     purchaseRequests: new Map(),
     adminUsers: [],
     adminBalanceAdjustments: [],
+    adminUsersSearch: '',
     selectedAdminHistoryUserId: null,
     selectedAdminHistoryUserLabel: '',
     availableServices: [],
@@ -2548,6 +2549,18 @@ function renderAdminUsers(users) {
     );
 }
 
+function syncAdminUsersList() {
+    const container = qs('admin-users-list');
+    if (!container) return;
+    const query = String(state.adminUsersSearch || '').trim().toLowerCase();
+    const filteredUsers = !query
+        ? state.adminUsers
+        : state.adminUsers.filter((user) => String(user.email || '').toLowerCase().includes(query));
+    container.innerHTML = filteredUsers.length
+        ? renderAdminUsers(filteredUsers)
+        : renderEmptyState('No matching user found', 'Try searching with the user Gmail or full email address.');
+}
+
 function renderAdminBalanceAdjustments(adjustments) {
     if (!adjustments.length) {
         return renderEmptyState('No adjustments yet', 'Manual positive or negative admin balance adjustments will appear here.');
@@ -2722,7 +2735,7 @@ async function loadAdminData() {
         renderAdminOrders(orders);
         qs('admin-payment-history-list').innerHTML = renderAdminPaymentHistory(processedPaymentRequests);
         qs('admin-financial-ledger-list').innerHTML = renderFinancialLedger(ledgerTransactions);
-        qs('admin-users-list').innerHTML = renderAdminUsers(users);
+        syncAdminUsersList();
         qs('admin-balance-adjustments-list').innerHTML = renderAdminBalanceAdjustments(balanceAdjustments);
         if (state.selectedAdminHistoryUserId) {
             await loadAdminUserHistory(state.selectedAdminHistoryUserId, state.selectedAdminHistoryUserLabel, { preserveScroll: true });
@@ -3322,6 +3335,10 @@ function bindStaticEvents() {
     });
     qs('country-search').addEventListener('input', renderCountries);
     qs('service-search')?.addEventListener('input', filterServiceButtons);
+    qs('admin-users-search')?.addEventListener('input', (event) => {
+        state.adminUsersSearch = String(event.target?.value || '');
+        syncAdminUsersList();
+    });
     qsa('[data-history-filter]').forEach((button) => {
         button.addEventListener('click', () => setActivationFilter(button.dataset.historyFilter));
     });
