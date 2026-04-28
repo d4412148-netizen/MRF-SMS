@@ -10,6 +10,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1342069364437039');
+        fbq('track', 'PageView');
+    </script>
+    <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -292,6 +304,7 @@
     </style>
 </head>
 <body class="app-surface min-h-screen text-slate-100">
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1342069364437039&ev=PageView&noscript=1" /></noscript>
 
     <div id="payment-top-alert" class="payment-top-alert hidden">
         <div id="payment-top-alert-text" class="text-sm font-semibold leading-7" dir="rtl">یہ پیمنٹ manually add ہوگی۔ ایڈمن پیمنٹ چیک کر کے approve کریگا تو تھوڑا ٹائم لگے گا۔ اگر 10 منٹ سے زیادہ لگتا ہے تو نیچے چیٹ میں ایڈمن کو بتا دیں۔</div>
