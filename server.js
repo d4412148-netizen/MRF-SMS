@@ -6182,7 +6182,7 @@ function extendWhatsappCountriesFromFile(catalog) {
 }
 
  const whatsappCountryStatus = {
-'South Africa': { label: 'Low OTP', color: 'green' },
+'South Africa': { label: 'Low OTP', color: 'Red' },
 'Indonesia': { label: 'Good OTP', color: 'green' },
 'Canada': { label: 'Low OTP', color: 'green' },
 'Philippines': { label: 'Good OTP', color: 'green' },
@@ -6191,8 +6191,8 @@ function extendWhatsappCountriesFromFile(catalog) {
 'Colombia': { label: 'Good OTP', color: 'green' },
 'Saudi Arabia': { label: 'Good OTP', color: 'green' },
 'Brazil': { label: 'Good OTP', color: 'green' },
-'USA': { label: 'Low OTP', color: 'green' },
-'United Kingdom': { label: 'Low OTP', color: 'green' }
+'USA': { label: 'Good OTP', color: 'green' },
+'United Kingdom': { label: 'Good OTP', color: 'green' }
  };
 
  function buildExtraServiceCountryArraysFromFiles(catalog) {
