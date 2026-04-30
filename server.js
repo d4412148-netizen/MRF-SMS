@@ -1021,6 +1021,7 @@ const whatsappCountries = [
     { name: 'Brazil', code: '+55', price: 370, countryId: 73, flag: '🇧🇷' },
     { name: 'USA', code: '+1', price: 370, countryId: 187, flag: '🇺🇸' },
     { name: 'United Kingdom', code: '+44', price: 300, countryId: 16, flag: '🇬🇧' },
+    { name: 'Somalia', code: '+252', price: 65.16, countryId: 149, flag: '🇸🇴' },
     { name: 'Chile', code: '+56', price: 68.07, countryId: 151, flag: '🇨🇱' },
     { name: 'Peru', code: '+51', price: 122.67, countryId: 65, flag: '🇵🇪' },
     { name: 'Hong Kong', code: '+852', price: 122.67, countryId: 14, flag: '🇭🇰' },
@@ -1040,7 +1041,6 @@ const whatsappCountries = [
     { name: 'Romania', code: '+40', price: 230.05, countryId: 32, flag: '🇷🇴' },
     { name: 'Netherlands', code: '+31', price: 291.2, countryId: 48, flag: '🇳🇱' },
     { name: 'Czech Republic', code: '+420', price: 230.78, countryId: 63, flag: '🇨🇿' },
-    { name: 'Somalia', code: '+252', price: 65.16, countryId: 149, flag: '🇸🇴' },
     { name: 'Zambia', code: '+260', price: 212.58, countryId: 147, flag: '🇿🇲' },
     { name: 'Morocco', code: '+212', price: 102.65, countryId: 37, flag: '🇲🇦' },
     { name: 'Ghana', code: '+233', price: 212.58, countryId: 38, flag: '🇬🇭' },
@@ -6192,7 +6192,8 @@ function extendWhatsappCountriesFromFile(catalog) {
 'Saudi Arabia': { label: 'Good OTP', color: 'green' },
 'Brazil': { label: 'Good OTP', color: 'green' },
 'USA': { label: 'Good OTP', color: 'green' },
-'United Kingdom': { label: 'Good OTP', color: 'green' }
+'United Kingdom': { label: 'Good OTP', color: 'green' },
+'Somalia': { label: 'Good OTP', color: 'green' }
  };
 
  function buildExtraServiceCountryArraysFromFiles(catalog) {
