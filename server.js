@@ -6192,9 +6192,9 @@ function extendWhatsappCountriesFromFile(catalog) {
 'Colombia': { label: 'Good OTP', color: 'green' },
 'Saudi Arabia': { label: 'Good OTP', color: 'green' },
 'Brazil': { label: 'Good OTP', color: 'green' },
+'Pakistan': { label: 'Out of stock', color: 'red' },
 'USA': { label: 'Good OTP', color: 'green' },
 'United Kingdom': { label: 'Good OTP', color: 'green' },
-'Somalia': { label: 'Good OTP', color: 'green' }
  };
 
  function buildExtraServiceCountryArraysFromFiles(catalog) {
