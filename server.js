@@ -1010,9 +1010,8 @@ async function updateUserLastLogin(userId) {
 }
 
 const whatsappCountries = [
-    { name: 'South Africa', code: '+27', price: 80, countryId: 31, flag: '🇿🇦' },
-    { name: 'Indonesia', code: '+62', price: 160, countryId: 6, flag: '🇮🇩' },
     { name: 'Canada', code: '+1', price: 160, countryId: 36, flag: '🇨🇦' },
+    { name: 'Indonesia', code: '+62', price: 160, countryId: 6, flag: '🇮🇩' },
     { name: 'Philippines', code: '+63', price: 190, countryId: 4, flag: '🇵🇭' },
     { name: 'Thailand', code: '+66', price: 300, countryId: 52, flag: '🇹🇭' },
     { name: 'Vietnam', code: '+84', price: 210, countryId: 10, flag: '🇻🇳' },
@@ -1021,6 +1020,7 @@ const whatsappCountries = [
     { name: 'Brazil', code: '+55', price: 370, countryId: 73, flag: '🇧🇷' },
     { name: 'USA', code: '+1', price: 370, countryId: 187, flag: '🇺🇸' },
     { name: 'United Kingdom', code: '+44', price: 300, countryId: 16, flag: '🇬🇧' },
+    { name: 'South Africa', code: '+27', price: 80, countryId: 31, flag: '🇿🇦' },
     { name: 'Somalia', code: '+252', price: 65.16, countryId: 149, flag: '🇸🇴' },
     { name: 'Chile', code: '+56', price: 68.07, countryId: 151, flag: '🇨🇱' },
     { name: 'Peru', code: '+51', price: 122.67, countryId: 65, flag: '🇵🇪' },
