@@ -2062,6 +2062,7 @@ const openaiCountries = [
 const paypalCountries = [
     { name: 'Iran', code: '', price: 2.35, countryId: 57, flag: '🇮🇷' },
     { name: 'Serbia', code: '', price: 196.78, countryId: 29, flag: '🇷🇸' },
+    { name: 'United Kingdom', code: '+44', price: 40, countryId: 16, flag: '🇬🇧' },
     { name: 'Turkey', code: '', price: 196.78, countryId: 62, flag: '🇹🇷' },
     { name: 'Azerbaijan', code: '', price: 278.71, countryId: 35, flag: '🇦🇿' },
     { name: 'Nigeria', code: '', price: 1.57, countryId: 19, flag: '🇳🇬' },
